@@ -1,0 +1,33 @@
+body {
+    background-color: #FFE6E5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #270502;
+}
+
+ul,
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171D1C;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FA413A;
+}
+
+button {
+    background-color: #FA8072;
+    border-radius: 5px;
+}
