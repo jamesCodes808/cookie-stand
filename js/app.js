@@ -1,176 +1,114 @@
 'use strict'
 
-const seattleShop = {
-    name: 'seattle',
-    minHourlyCustomers: 23,
-    maxHourlyCustomers: 65,
-    averageCookieSale: 6.3,
-    numberOfCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers)
-    },
-    amountOfCookiesPurchasedPerHour: function () {
-        return Math.floor(this.averageCookieSale * this.numberOfCustomersPerHour())
-    },
-    resultsOfSalesPerDay: function () {
-        let hourlySalesData = new Array();
-        for (let i = 0; i < 14; i++) {
-            hourlySalesData.push(this.amountOfCookiesPurchasedPerHour())
-        }
-        return hourlySalesData;
-    },
-    totalOfAllSalesInADay: function () {
-        let totalSales = 0;
-        let arr = this.resultsOfSalesPerDay();
-        for (let i = 0; i < arr.length; i++) {
-            totalSales += arr[i];
-        }
-        return totalSales;
-    }
-};
+let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
-const tokyoShop = {
-    name: 'tokyo',
-    minHourlyCustomers: 3,
-    maxHourlyCustomers: 24,
-    averageCookieSale: 1.2,
-    numberOfCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers)
-    },
-    amountOfCookiesPurchasedPerHour: function () {
-        return Math.floor(this.averageCookieSale * this.numberOfCustomersPerHour())
-    },
-    resultsOfSalesPerDay: function () {
-        let hourlySalesData = new Array();
-        for (let i = 0; i < 14; i++) {
-            hourlySalesData.push(this.amountOfCookiesPurchasedPerHour())
-        }
-        return hourlySalesData;
-    },
-    totalOfAllSalesInADay: function () {
-        let totalSales = 0;
-        let arr = this.resultsOfSalesPerDay();
-        for (let i = 0; i < arr.length; i++) {
-            totalSales += arr[i];
-        }
-        return totalSales;
-    }
-};
+let tableBody = document.getElementById('display-sales');
 
-const dubaiShop = {
-    name: 'dubai',
-    minHourlyCustomers: 11,
-    maxHourlyCustomers: 38,
-    averageCookieSale: 3.7,
-    numberOfCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers)
-    },
-    amountOfCookiesPurchasedPerHour: function () {
-        return Math.floor(this.averageCookieSale * this.numberOfCustomersPerHour())
-    },
-    resultsOfSalesPerDay: function () {
-        let hourlySalesData = new Array();
-        for (let i = 0; i < 14; i++) {
-            hourlySalesData.push(this.amountOfCookiesPurchasedPerHour())
-        }
-        return hourlySalesData;
-    },
-    totalOfAllSalesInADay: function () {
-        let totalSales = 0;
-        let arr = this.resultsOfSalesPerDay();
-        for (let i = 0; i < arr.length; i++) {
-            totalSales += arr[i];
-        }
-        return totalSales;
-    }
-};
-
-const parisShop = {
-    name: 'paris',
-    minHourlyCustomers: 20,
-    maxHourlyCustomers: 38,
-    averageCookieSale: 2.3,
-    numberOfCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers)
-    },
-    amountOfCookiesPurchasedPerHour: function () {
-        return Math.floor(this.averageCookieSale * this.numberOfCustomersPerHour())
-    },
-    resultsOfSalesPerDay: function () {
-        let hourlySalesData = new Array();
-        for (let i = 0; i < 14; i++) {
-            hourlySalesData.push(this.amountOfCookiesPurchasedPerHour())
-        }
-        return hourlySalesData;
-    },
-    totalOfAllSalesInADay: function () {
-        let totalSales = 0;
-        let arr = this.resultsOfSalesPerDay();
-        for (let i = 0; i < arr.length; i++) {
-            totalSales += arr[i];
-        }
-        return totalSales;
-    }
-};
-
-const limaShop = {
-    name: 'lima',
-    minHourlyCustomers: 2,
-    maxHourlyCustomers: 16,
-    averageCookieSale: 4.6,
-    numberOfCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers)
-    },
-    amountOfCookiesPurchasedPerHour: function () {
-        return Math.floor(this.averageCookieSale * this.numberOfCustomersPerHour())
-    },
-    resultsOfSalesPerDay: function () {
-        let hourlySalesData = new Array();
-        for (let i = 0; i < 14; i++) {
-            hourlySalesData.push(this.amountOfCookiesPurchasedPerHour())
-        }
-        return hourlySalesData;
-    },
-    totalOfAllSalesInADay: function () {
-        let totalSales = 0;
-        let arr = this.resultsOfSalesPerDay();
-        for (let i = 0; i < arr.length; i++) {
-            totalSales += arr[i];
-        }
-        return totalSales;
-    }
-};
-
-
-const salmonShops = [seattleShop, tokyoShop, dubaiShop, parisShop, limaShop]
-
-
-let salesData = document.getElementById('display-sales');
-
-
-function displayAllSalesData() {
-    for (let shop in salmonShops) {
-        salesData.innerHTML += `<h3>${salmonShops[shop].name.toUpperCase()}</h3>
-        <ul>
-            <li>6am: ${salmonShops[shop].resultsOfSalesPerDay()[0]} cookies</li>
-            <li>7am: ${salmonShops[shop].resultsOfSalesPerDay()[1]} cookies</li>
-            <li>8am: ${salmonShops[shop].resultsOfSalesPerDay()[2]} cookies</li>
-            <li>9am: ${salmonShops[shop].resultsOfSalesPerDay()[3]} cookies</li>
-            <li>10am: ${salmonShops[shop].resultsOfSalesPerDay()[4]} cookies</li>
-            <li>11am: ${salmonShops[shop].resultsOfSalesPerDay()[5]} cookies</li>
-            <li>12am: ${salmonShops[shop].resultsOfSalesPerDay()[6]} cookies</li>
-            <li>1pm: ${salmonShops[shop].resultsOfSalesPerDay()[7]} cookies</li>
-            <li>2pm: ${salmonShops[shop].resultsOfSalesPerDay()[8]} cookies</li>
-            <li>3pm: ${salmonShops[shop].resultsOfSalesPerDay()[9]} cookies</li>
-            <li>4pm: ${salmonShops[shop].resultsOfSalesPerDay()[10]} cookies</li>
-            <li>5pm: ${salmonShops[shop].resultsOfSalesPerDay()[11]} cookies</li>
-            <li>6pm: ${salmonShops[shop].resultsOfSalesPerDay()[12]} cookies</li>
-            <li>7pm: ${salmonShops[shop].resultsOfSalesPerDay()[13]} cookies</li>
-            <li>Total: ${salmonShops[shop].totalOfAllSalesInADay()} cookies</li>
-        </ul>
-        `
-    }
-
+// constructor for salmon cookie shops 
+function Shop(location, minHourlyCustomers, maxHourlyCustomers, avgCookieSale) {
+    this.location = location;
+    this.minHourlyCustomers = minHourlyCustomers;
+    this.maxHourlyCustomers = maxHourlyCustomers;
+    this.avgCookieSale = avgCookieSale;
+    this.customersPerHour;
+    this.cookiesPurchasedPerHour;
+    this.total;
+    shopsArray.push(this)
 }
 
-displayAllSalesData();
+// Shop Prototype functions 
+Shop.prototype.getNumberOfCustomersPerHour = function () {
+    this.customersPerHour = new Array();
+    for (let i = 0; i < hours.length; i++) {
+        this.customersPerHour.push(Math.floor(Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) + this.minHourlyCustomers));
+    }
+    return this.customersPerHour;
+}
+
+Shop.prototype.getAmountOfCookiesPurchasedPerHour = function () {
+    this.getNumberOfCustomersPerHour();
+    this.cookiesPurchasedPerHour = new Array();
+    for (let i = 0; i < hours.length; i++) {
+        this.cookiesPurchasedPerHour.push(Math.floor(this.avgCookieSale * this.customersPerHour[i]))
+    }
+    return this.cookiesPurchasedPerHour;
+}
+
+Shop.prototype.getTotal = function () {
+    this.getNumberOfCustomersPerHour();
+    this.getAmountOfCookiesPurchasedPerHour();
+    this.total = 0;
+    for (let i = 0; i < hours.length; i++) {
+        this.total += this.cookiesPurchasedPerHour[i]
+    }
+    return this.total;
+}
+
+Shop.prototype.render = function () {
+    this.getNumberOfCustomersPerHour();
+    this.getAmountOfCookiesPurchasedPerHour();
+    this.getTotal();
+
+    // Create new Row and render into page
+    let dataRow = document.createElement('tr')
+    dataRow.id = `${this.location}-sales`;
+    tableBody.append(dataRow);
+
+    for (let i = 0; i < this.cookiesPurchasedPerHour.length; i++) {
+        dataRow.append(document.createElement('td'));
+    }
+
+    let salesData = dataRow.querySelectorAll('td')
+
+    for (let i = 0; i < salesData.length; i++) {
+        salesData[i].innerText = this.cookiesPurchasedPerHour[i]
+    }
+
+    dataRow.prepend(document.createElement('td'))
+
+    dataRow.firstElementChild.innerText = this.location;
+
+    dataRow.append(document.createElement('td'));
+
+    dataRow.lastElementChild.innerText = this.total;
+}
+
+function renderHours() {
+    // insert hour array
+    let headerRow = document.getElementById('table-header');
+
+    for (let i = 0; i < hours.length; i++) {
+        headerRow.append(document.createElement('th'));
+    };
+
+    let hourData = headerRow.querySelectorAll('th');
+
+    for (let i = 0; i < hourData.length; i++) {
+        hourData[i].innerText = hours[i];
+    };
+
+    headerRow.prepend(document.createElement('th'));
+
+    headerRow.append(document.createElement('th'));
+
+    headerRow.lastElementChild.innerText = 'Total'
+}
+
+function renderSales(arrayOfShops) {
+    for (let i = 0; i < arrayOfShops.length; i++) {
+        arrayOfShops[i].render();
+    }
+}
+
+let shopsArray = []
+
+const seattleShop = new Shop('seattle', 23, 65, 6.3);
+const tokyoShop = new Shop('tokyo', 3, 24, 1.2);
+const dubaiShop = new Shop('dubai', 11, 38, 3.7);
+const parisShop = new Shop('paris', 20, 38, 2.3);
+const limaShop = new Shop('lima', 2, 16, 4.6);
+
+renderHours();
+renderSales(shopsArray);
+
 
