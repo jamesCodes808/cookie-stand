@@ -66,7 +66,7 @@ Shop.prototype.render = function () {
 
     dataRow.prepend(document.createElement('td'))
 
-    dataRow.firstElementChild.innerText = this.location;
+    dataRow.firstElementChild.innerText = this.location.toUpperCase();
 
     dataRow.append(document.createElement('td'));
 
