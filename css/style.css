@@ -69,18 +69,24 @@ li {
 
 .hero-img {
     z-index: 1;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 500px;
+    max-height: 300px;
 }
 
 .hero-img-bg {
-    width: 20%;
-    height: 50%;
-    top: 20%;
+    width: 300px;
+    height: 400px;
+    top: 150px;
     border-radius: 50%;
     position: absolute;
     z-index: 0;
 }
+
+/* main section  */
+main {
+    margin-bottom: 50px;
+}
+
 
 /* Table Styles  */
 table {
@@ -120,15 +126,16 @@ tr:nth-child(odd) td {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 40px 500px;
+    margin: 40px 400px;
 }
 
 footer p {
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 footer i {
     transition: 1s;
+    margin-bottom: 30px;
 }
 
 footer i:hover {
@@ -146,12 +153,14 @@ footer i:hover {
     }
 
     .hero-img-bg {
-        max-width: 50%;
-        max-height: 20%;
-        top: 30%;
-        border-radius: 50%;
-        position: absolute;
-        z-index: 0;
+        visibility: hidden;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px auto;
     }
 }
 
@@ -159,32 +168,40 @@ footer i:hover {
 @media (min-width:769px) and (max-width: 1024px) {
     .hero-img {
         z-index: 1;
-        max-width: 50%;
-        max-height: 50%;
+        max-width: 500px;
+        max-height: 300px;
     }
 
     .hero-img-bg {
-        width: 20%;
-        height: 30%;
-        top: 15%;
+        width: 300px;
+        height: 400px;
+        top: 150px;
         border-radius: 50%;
         position: absolute;
         z-index: 0;
     }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px auto;
+    }
+
 }
 
 /* Desktop  */
 @media (min-width: 1025px) and (max-width: 1200px) {
     .hero-img {
         z-index: 1;
-        max-width: 50%;
-        max-height: 50%;
+        max-width: 500px;
+        max-height: 300px;
     }
 
     .hero-img-bg {
-        width: 20%;
-        height: 50%;
-        top: 30%;
+        width: 300px;
+        height: 400px;
+        top: 150px;
         border-radius: 50%;
         position: absolute;
         z-index: 0;
