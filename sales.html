@@ -31,9 +31,33 @@
     </header>
     <main>
         <h1>Sales Data</h1>
-        <form action="" method="get">
-            
-
+        <form id="sales-data-form" action="#" method="#">
+            <fieldset>
+                <legend>
+                    <h3>Add City Sales Data
+                    </h3>
+                </legend>
+                <section>
+                    <label for="cityName">City Name:</label>
+                    <input id="cityName" type="text" name="cityNameInput" placeholder="enter city name" />
+                </section>
+                <section>
+                    <label for="minCust">Min Hourly Customers:</label>
+                    <input type="number" name="minCustomersInput" id="minCust"
+                        placeholder="enter minimum hourly customers">
+                </section>
+                <section>
+                    <label for="maxCust">Max Hourly Customers:</label>
+                    <input type="number" name="maxCustomersInput" id="maxCust"
+                        placeholder="enter maximum hourly customers">
+                </section>
+                <section>
+                    <label for="avgCookies">Average</label>
+                    <input type="number" name="avgCookiesInput" id="avgCookies" placeholder="enter average cookies sold"
+                        step="any">
+                </section>
+                <button type="submit">Generate Sales Data</button>
+            </fieldset>
         </form>
         <table>
             <thead id="sales-table-header">
