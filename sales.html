@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/004ffe82fe.js" crossorigin="anonymous"></script>
+
     <!-- Google Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Slab:wght@300;400&family=Roboto:wght@100;300;500&family=Yellowtail&display=swap"
+        rel="stylesheet">
 
     <!-- link CSS  -->
     <link rel="stylesheet" href="css/reset.css">
@@ -21,7 +26,7 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Locations</a></li>
                 <li><a href="#">FAQ</a></li>
@@ -52,16 +57,16 @@
                         placeholder="enter maximum hourly customers">
                 </section>
                 <section>
-                    <label for="avgCookies">Average</label>
+                    <label for="avgCookies">Average Cookies Sold:</label>
                     <input type="number" name="avgCookiesInput" id="avgCookies" placeholder="enter average cookies sold"
                         step="any">
                 </section>
                 <section>
-                    <label for="openHours">Open Hours (24 hour format)</label>
+                    <label for="openHours">Open Hours (24 hr ):</label>
                     <input type="text" name="openHours" id="openHours">
                 </section>
                 <section>
-                    <label for="closedHours">Close Hours (24 hour format)</label>
+                    <label for="closedHours">Close Hours (24 hr): </label>
                     <input type="text" name="closedHours" id="closedHours">
                 </section>
                 <button type="submit">Generate Sales Data</button>
@@ -79,6 +84,16 @@
             </tfoot>
         </table>
     </main>
+    <footer>
+        <hr>
+        <section class="footer-container">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </section>
+        <p>©Created by James Ian Solima</p>
+    </footer>
     <!-- link JS  -->
     <script src="js/app.js"></script>
 </body>

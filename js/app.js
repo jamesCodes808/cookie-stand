@@ -95,10 +95,10 @@ Store.prototype.render = function () {
 };
 
 new Store('seattle', 23, 65, 6.3, 6, 20);
-new Store('tokyo', 3, 24, 1.2, 6, 17);
-new Store('dubai', 11, 38, 3.7, 6, 15);
-new Store('paris', 20, 38, 2.3, 6, 14);
-new Store('lima', 2, 16, 4.6, 6, 19);
+new Store('tokyo', 3, 24, 1.2, 6, 20);
+new Store('dubai', 11, 38, 3.7, 6, 20);
+new Store('paris', 20, 38, 2.3, 6, 20);
+new Store('lima', 2, 16, 4.6, 6, 20);
 
 
 for (let store of storeLocationsList) {
