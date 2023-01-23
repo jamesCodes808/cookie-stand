@@ -12,4 +12,4 @@ Pat’s Salmon Cookies, soon with franchises internationally, needs a proof of c
 
 Because we are early in the life of this business, we will need to build an application that is adaptable. Pat will need to be able to add and remove locations from the daily projections report, and Pat will also need to be able to easily modify the input numbers for each location based on day of the week, special events, and other factors. Pat would like to see these numbers with nice formatting in a web application.
 
-![image](img/cookie-standlab08report.png)
+![image](img/cookie-standlab10report.png)
