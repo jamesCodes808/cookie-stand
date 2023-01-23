@@ -20,12 +20,6 @@ p {
 }
 
 
-
-button {
-    background-color: #FA8072;
-    border-radius: 5px;
-}
-
 main {
     margin: 0 auto;
 }
@@ -178,7 +172,17 @@ fieldset input {
 }
 
 fieldset button {
+    background-color: #FA8072;
+    border-radius: 5px;
+    padding: 5px;
     margin: 30px;
+    transition: 1s;
+}
+
+fieldset button:hover {
+    background-color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+    transform: translateY(-0.25em)
 }
 
 
