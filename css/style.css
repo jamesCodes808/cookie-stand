@@ -43,6 +43,7 @@ nav {
 ul,
 li {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     display: inline-flex;
     position: relative;
     float: inline-start;
@@ -106,7 +107,7 @@ table {
     font-size: 0.8rem;
     margin: 30px auto;
     overflow-y: scroll;
-    width: 600px;
+    width: 940px;
     height: 237px;
     font-family: 'Roboto';
 }
@@ -126,11 +127,11 @@ td {
 }
 
 tr:nth-child(even) td {
-    background-color: rgb(245, 214, 214);
+    background-color: rgb(247, 225, 205);
 }
 
 tr:nth-child(odd) td {
-    background-color: rgb(178, 216, 252);
+    background-color: rgb(225, 241, 255);
 }
 
 
